@@ -1,11 +1,20 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+
+///////////////////////////////////////////
+//
+//
+//	@Author Robert Vasquez - 2019
+//
+//
+///////////////////////////////////////////
+
+	//Clase Que da forma al menú
 
 public class ventanaMenu implements ActionListener {
 	JFrame ventana;
@@ -13,6 +22,7 @@ public class ventanaMenu implements ActionListener {
 	JMenuItem sub1,sub2;
 	JMenuBar menubar;
 	
+	//Metodo para crear Menú
 	public void crearMenu(){
 		menubar = new JMenuBar();
 		
@@ -49,6 +59,7 @@ public class ventanaMenu implements ActionListener {
 
 	}
 	
+	//Método para crear Ventana
 	public void crearVentana(){
 		ventana = new JFrame("Ventana con Menú");
 		ventana.setLayout(new BoxLayout(ventana.getContentPane(), BoxLayout.Y_AXIS));
@@ -58,6 +69,7 @@ public class ventanaMenu implements ActionListener {
 		ventana.setDefaultCloseOperation(ventana.EXIT_ON_CLOSE);
 	}
 	
+	//Constructor
 	public ventanaMenu(){
 		crearMenu();
 		crearVentana();
@@ -66,7 +78,6 @@ public class ventanaMenu implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		if(arg0.getSource() == sub1 ){
-			//System.out.println("X");
 			ventana.setSize(500,500);
 		}
 		
